@@ -1,9 +1,9 @@
 package test;
 
-import logica.Calculadora;
 import logica.Parcial;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -28,8 +28,19 @@ class ParcialTest {
 	}
 	
 	@Test
-	public void testDiscriminanteNegativo() {
+	public void testRaicesReales() throws Exception {
+		double[] raices = this.parcial.calcularRaices(1,-5,6);
+		
+		assertEquals(3, raices[0]);
+		assertEquals(2, raices[1]);
+		
+		raices = this.parcial.calcularRaices(1,0,-9);
+		assertEquals(3, raices[0]);
+		assertEquals(-3, raices[1]);
+		
+		
+		
 		
 	}
-
+	
 }

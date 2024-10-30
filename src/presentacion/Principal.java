@@ -9,8 +9,8 @@ public class Principal {
 		
 		try {
 			int a = 1;
-			int b = 5;
-			int c = 5;
+			int b = -1;
+			int c = -6;
 			
 			double raices[]= parcial.calcularRaices(a, b, c);
 			
